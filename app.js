@@ -26,7 +26,7 @@ app.use("/api/movies",movieRouter);
 app.use("/api/theatres", theatreRouter);
 app.use("/api/bookings",bookingRouter);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, function(){
-    console.log(`Server is listening at port ${PORT}`);
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log(`Server is listening at port ${port}`);
 })
