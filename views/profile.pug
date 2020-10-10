@@ -1,0 +1,18 @@
+extend base
+block header
+    include nav
+block content
+    h3 Name : #{user.name}
+    h3 Email : #{user.email}
+    .profile-btns
+        .btn-parent
+            if user.role=="Theatre-Owner"
+                a.btn.btn-full.profile-btn(href='/newtheatre') Add a Theatre
+                a.btn.btn-full.profile-btn(href='/newmovie') Add a Movie
+            else
+                a.btn.btn-full.profile-btn(href='/movies/available') Available Movies
+        .btn-parent
+            if user.role=="Theatre-Owner"
+                a.btn.btn-full.profile-btn(href='/movies')  Previously Posted Movies
+            else
+                a.btn.btn-full.profile-btn(href='/movies/booked') Past Bookings

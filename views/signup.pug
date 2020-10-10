@@ -1,0 +1,27 @@
+extend base
+block content
+    h2 Signup
+    .container__parent
+        video.bg-video__content(autoplay='' muted='' loop='')
+            source(src='Avocado.mp4' type='video/mp4')
+            |     Your browser is not supported
+        form.signup
+            .entry
+            .entry-text Role
+            select#role(name='role')
+                option(value='Customer') Customer
+                option(value='Theatre-Owner') Theatre-Owner
+            .entry
+            .entry-text Name
+            input(type='text' name='name' placeholder='Your Name' id='')
+            .entry
+            .entry-text Email
+            input(type='email' name='email' placeholder='Your Email' id='')
+            .entry
+            .entry-text Password
+            input(type='password' name='Password' placeholder='' required='')
+            .entry
+            .entry-text Phone number
+            input(type='tel' name='' placeholder='' required='')
+            .btn-parent
+            button.btn.btn-full.form-button(type='submit') signup

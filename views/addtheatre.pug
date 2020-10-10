@@ -1,0 +1,21 @@
+extend base
+block header
+    include nav
+block content
+    h2 Add Theatre
+    .container__parent
+        video.bg-video__content(autoplay='' muted='' loop='')
+            source(src='Avocado.mp4' type='video/mp4')
+            |         Your browser is not supported
+        form.theatre
+            .entry
+            .entry-text Name of Theatre
+            input(type='text' name='name' placeholder='Your Name of Theatre' id='')
+            .entry
+            .entry-text Location
+            input(type='text' name='Location' placeholder='Your Location' id='')
+            .entry
+            .entry-text Phone number
+            input(type='tel' name='' placeholder='' required='')
+            .btn-parent
+            button.btn.btn-full.form-button(type='submit') Add

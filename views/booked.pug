@@ -1,0 +1,7 @@
+extend base
+block header
+    include nav
+block content
+    h2 Past Bookings
+    for booked in bookings
+        include bookedcard.pug

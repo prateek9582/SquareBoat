@@ -1,0 +1,23 @@
+extend base
+block header
+    include nav
+block content
+    h2 Add Movie
+    .container__parent
+        video.bg-video__content(autoplay='' muted='' loop='')
+            source(src='Avocado.mp4' type='video/mp4')
+            |         Your browser is not supported
+        form.newmovie
+            .entry
+                .entry-text Theater Name
+                select#theatrename(name='Theatre Name')
+                    for theatreval in theatre
+                        option(value = `${theatreval["_id"]}`) #{theatreval.name}
+            .entry
+                .entry-text Name of movie
+                input(type='text' name='name of movie' placeholder='Enter Name of movie' id='')
+            .entry
+                .entry-text Time
+                input(type='datetime-local' name='' placeholder='' required='')
+            .btn-parent
+                button.btn.btn-full.form-button(type='submit') Add

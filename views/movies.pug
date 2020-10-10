@@ -1,0 +1,10 @@
+extend base
+block header
+    include nav
+block content
+    if(title)
+        h2 Previously Posted Movies
+    else
+        h2 Available Movies
+    for movie in movies
+        include moviecard

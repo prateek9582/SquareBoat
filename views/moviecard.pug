@@ -1,0 +1,11 @@
+//- extend base
+.card
+    h5.card-header Movie : #{movie.moviename}
+    .card-body
+        h5.card-title Theater : #{movie.theatrename}
+        h5.card-text  Show Time : #{movie.time}
+        if(title != "previous")
+            h5.card-title Number of Seats
+            .seats
+                input(type='number' name='' id='')
+                a.btn.btn-primary.booking(href='' id = `${movie["_id"]}`) book
