@@ -65,7 +65,9 @@ module.exports.pastbooking = async function(req, res,next){
                 "moviename" : movie[i].name,
                 "theatrename" : theatre[i].name,
                 "showtime" : movie[i].time,
-                "bookingtime" : booked[i].bookingtime
+                "bookingtime" : booked[i].bookingtime,
+                "bookingid" : booked[i]["_id"],
+                "seats" : booked[i].seat
             }
             allbookings.push(mappedbooking);
 
